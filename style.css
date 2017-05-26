@@ -22,10 +22,11 @@
 }
 
 .road{
+    border: 5px solid #a7a7a7;
     background: grey;
     height: 40%;
     width: 99.35%;
-    border: 5px solid #f4f4f4;
+    
 }
 
 .lines{
@@ -39,15 +40,17 @@
     position: absolute;
     top:63%;
     animation-name: moves;
-    animation-duration: 5s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
 
 @keyframes moves{
     from{
-        transform: translateX(700px)
+        transform: translateX(1700px)
     }
     to{
-        transform: translateX(0)
+        transform: translateX(-100px)
     }
 }
 
