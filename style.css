@@ -26,7 +26,6 @@
     background: grey;
     height: 40%;
     width: 99.35%;
-    
 }
 
 .lines{
@@ -45,12 +44,30 @@
     animation-iteration-count: infinite;
 }
 
+.mario1{
+    position: absolute;
+    top: 82%;
+    animation-name: moves1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
 @keyframes moves{
     from{
         transform: translateX(1700px)
     }
     to{
         transform: translateX(-100px)
+    }
+}
+
+@keyframes moves1{
+    from{
+        transform: translateX(-20px)
+    }
+
+    to{
+        transform: translateX(1500px)
     }
 }
 
