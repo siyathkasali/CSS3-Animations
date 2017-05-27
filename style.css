@@ -15,6 +15,14 @@
     background: skyblue;
 }
 
+.cloud{
+    width: 200px;
+    animation-name: clouds;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
 .grass{
     width:100%;
     background: green;
@@ -42,14 +50,18 @@
     animation-duration: 3s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
+     animation-timing-function: linear;
 }
 
 .mario1{
     position: absolute;
     top: 82%;
-    animation-name: moves1;
+    animation-name: moves;
     animation-duration: 3s;
+    animation-fill-mode: both;
     animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: cubic-bezier(.08,.72,.19,.89);
 }
 
 @keyframes moves{
@@ -61,13 +73,12 @@
     }
 }
 
-@keyframes moves1{
+@keyframes clouds{
     from{
         transform: translateX(-20px)
     }
-
     to{
-        transform: translateX(1500px)
+        transform: translateX(2000px)
     }
 }
 
