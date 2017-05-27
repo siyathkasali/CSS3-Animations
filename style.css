@@ -17,10 +17,17 @@
 
 .cloud{
     width: 200px;
-    animation-name: clouds;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+}
+
+.cloud:nth-child(1){
+    position: absolute;
+    top:60px;
+    opacity: 0.9;
+    animation:clouds 30s linear infinite;
+}
+
+.cloud:nth-child(2){
+    animation: clouds 20s linear infinite;
 }
 
 .grass{
@@ -46,11 +53,8 @@
 .mario{
     position: absolute;
     top:63%;
-    animation-name: moves;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-     animation-timing-function: linear;
+    animation: moves 3s infinite linear, jump 2s 0.3s ease;
+    
 }
 
 .mario1{
@@ -75,11 +79,17 @@
 
 @keyframes clouds{
     from{
-        transform: translateX(-20px)
+        transform: translateX(-200px)
     }
     to{
         transform: translateX(2000px)
     }
+}
+
+@keyframes jump{
+    0%{top:63%}
+    50%{top:30%}
+    100%{top:63%}
 }
 
 /*button{
